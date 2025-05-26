@@ -709,7 +709,7 @@
                     return; // Terlalu jauh untuk didengar
                 }
                 // Model atenuasi linear sederhana
-                const-volumeFactor = 1.0 - Math.max(0, Math.min(1, (distance - SFX_FULL_VOLUME_DISTANCE) / (SFX_MAX_HEARING_DISTANCE - SFX_FULL_VOLUME_DISTANCE)));
+                const volumeFactor = 1.0 - Math.max(0, Math.min(1, (distance - SFX_FULL_VOLUME_DISTANCE) / (SFX_MAX_HEARING_DISTANCE - SFX_FULL_VOLUME_DISTANCE)));
                 volume = SFX_BASE_VOLUME_SHOOT * volumeFactor;
             }
             playSFXFromPool(shootSFXPool, volume);
